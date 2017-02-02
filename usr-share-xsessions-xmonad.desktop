@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=XMonadHello
+Comment=Lightweight tiling window manager
+Exec=/etc/X11/Xsession
+Icon=
+Type=XSession

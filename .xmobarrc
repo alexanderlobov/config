@@ -1,0 +1,16 @@
+Config { font = "-*-terminus-*-r-normal-*-18-*-*-*-*-*-"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = TopW L 90
+       , commands = [ Run Weather "UUWW"
+                        [ "-t","<station>: <tempC>C"
+                        ]
+                        36000
+                    , Run Date "%a %b %_d %k:%M" "date" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{<fc=#ee9a00>%date%</fc> | %UUWW%"
+       }
+
