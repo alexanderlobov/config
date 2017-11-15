@@ -83,8 +83,6 @@ if has("autocmd")
   autocmd FileType text set foldmethod=marker
   autocmd FileType text set formatoptions=n2croql
   autocmd FileType text set wrap
-  autocmd FileType text set shiftwidth=3
-  autocmd FileType text set tabstop=3
 
   " autocmd FileType text setlocal formatoptions=tcqn
 
@@ -158,3 +156,13 @@ set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
 
 set nowrap
+
+set textwidth=80
+set colorcolumn=80
+highlight ColorColumn ctermbg=8
+
+if &diff
+    syntax off
+endif
+
+set formatoptions-=t
