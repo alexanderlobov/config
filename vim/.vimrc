@@ -74,6 +74,10 @@ if has("autocmd")
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
 
+  set cindent
+  set cino+=g-1
+  set cino+=:0
+
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
   au!
@@ -136,17 +140,22 @@ set shiftwidth=4
 set expandtab
 " set smarttab
 
+let g:pyindent_continue='&sw'
+let g:pyindent_open_paren='&sw'
+
 " Appearance
 
-set bg=dark
-colo desert
+colo comments
+" colo desert
+" set bg=dark
 
 " Always show a status line
 set laststatus=2
 
-set listchars=tab:>-,trail:~
-set list
 
+" set listchars=tab:>-,trail:~
+" set listchars=trail:~
+" set list
 " Для облегчения работы с кириллицей
 " Переключение раскладки по CTRL-^
 " Команды работают при любой раскладке
@@ -154,15 +163,22 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
+set textwidth=80
 
 set nowrap
+set autoindent
 
-set textwidth=80
+" set tags+=~/src/poco/tags
+" cscope add ~/src/poco/cscope.out
+
 set colorcolumn=80
-highlight ColorColumn ctermbg=8
+highlight ColorColumn ctermbg=DarkGrey
 
 if &diff
     syntax off
 endif
 
 set formatoptions-=t
+
+" highlight OverLength ctermbg=black ctermfg=red
+" match OverLength /\%81v.\+/
