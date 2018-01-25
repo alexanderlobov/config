@@ -1,0 +1,22 @@
+set background=dark
+highlight clear
+if exists("syntax_on")
+    syntax reset
+endif
+
+let colors_name = "codefocus"
+
+hi Normal      ctermfg=LightGray ctermbg=Black
+hi Comment     cterm=NONE ctermfg=DarkGray
+hi String      cterm=italic ctermfg=LightGray ctermbg=Black
+hi Constant    cterm=NONE ctermfg=LightGray
+hi Identifier  cterm=NONE ctermfg=LightGray
+hi Function    cterm=NONE ctermfg=LightGray
+hi Statement   cterm=NONE ctermfg=LightGray
+hi PreProc     cterm=NONE ctermfg=LightGray
+hi Type	       cterm=NONE ctermfg=LightGray
+hi Special     cterm=NONE ctermfg=LightGray
+hi Delimiter   cterm=NONE ctermfg=LightGray
+hi diffAdded   ctermfg=DarkGreen
+hi diffRemoved ctermfg=DarkRed
+hi Visual      ctermfg=Gray
