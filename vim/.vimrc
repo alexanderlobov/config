@@ -148,7 +148,10 @@ let g:pyindent_open_paren='&sw'
 
 " Appearance
 
+set t_ZH=[3m
+set t_ZR=[23m
 colo codefocus
+set colorcolumn=80
 
 " Always show a status line
 set laststatus=2
@@ -171,14 +174,13 @@ set autoindent
 set tags+=~/src/poco/tags
 cscope add ~/src/poco/cscope.out
 
-set colorcolumn=80
-highlight ColorColumn ctermbg=DarkGrey
 
-if &diff
-    syntax off
-endif
+" if &diff
+"     syntax off
+" endif
 
 " set formatoptions-=t
 
 " highlight OverLength ctermbg=black ctermfg=red
 " match OverLength /\%81v.\+/
+
