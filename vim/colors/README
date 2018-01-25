@@ -1,6 +1,0 @@
-codefocus.vim is a colorscheme that let you focus on the code, not on the
-syntax highlightning.
-
-* Comments are a bit darker that the main font
-* Strings use italics
-* Plain diffs supported
