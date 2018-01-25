@@ -27,3 +27,4 @@ hi Delimiter   cterm=NONE ctermfg=LightGray
 hi diffAdded   ctermfg=DarkGreen
 hi diffRemoved ctermfg=DarkRed
 hi Visual      ctermfg=Gray
+hi ColorColumn ctermbg=DarkGrey
