@@ -85,15 +85,18 @@ if has("autocmd")
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
   autocmd FileType text set foldmethod=marker
-  autocmd FileType text set formatoptions=n2croql
+  " autocmd FileType text set formatoptions=n2croql
   autocmd FileType text set wrap
+  autocmd FileType text set shiftwidth=4
+  autocmd FileType text set tabstop=4
 
   " autocmd FileType text setlocal formatoptions=tcqn
 
   autocmd FileType cpp set textwidth=80
   autocmd FileType cpp set wrap
+  " autocmd FileType cpp set colorcolumn=80
   " autocmd FileType cpp syntax off
-
+  
   autocmd FileType vim  set foldmethod=marker
 
   " When editing a file, always jump to the last known cursor position.
@@ -145,13 +148,10 @@ let g:pyindent_open_paren='&sw'
 
 " Appearance
 
-colo comments
-" colo desert
-" set bg=dark
+colo codefocus
 
 " Always show a status line
 set laststatus=2
-
 
 " set listchars=tab:>-,trail:~
 " set listchars=trail:~
@@ -168,8 +168,8 @@ set textwidth=80
 set nowrap
 set autoindent
 
-" set tags+=~/src/poco/tags
-" cscope add ~/src/poco/cscope.out
+set tags+=~/src/poco/tags
+cscope add ~/src/poco/cscope.out
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=DarkGrey
@@ -178,7 +178,7 @@ if &diff
     syntax off
 endif
 
-set formatoptions-=t
+" set formatoptions-=t
 
 " highlight OverLength ctermbg=black ctermfg=red
 " match OverLength /\%81v.\+/
