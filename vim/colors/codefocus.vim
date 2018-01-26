@@ -1,5 +1,7 @@
 " codefocus.vim is a colorscheme that let you focus on the code, not on the
 " syntax highlightning.
+"
+" http://alexanderlobov.ru/posts/2018-01-25-codefocus-colorscheme/
 " 
 " * Comments are a bit darker that the main font
 " * Strings use italics
