@@ -74,9 +74,9 @@ if has("autocmd")
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
 
-  set cindent
-  set cino+=g-1
-  set cino+=:0
+  autocmd FileType cpp set cindent
+  autocmd FileType cpp set cino+=g-1
+  autocmd FileType cpp set cino+=:0
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
@@ -85,14 +85,14 @@ if has("autocmd")
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
   autocmd FileType text set foldmethod=marker
-  " autocmd FileType text set formatoptions=n2croql
+  autocmd FileType text set formatoptions=tcqnro
   autocmd FileType text set wrap
   autocmd FileType text set shiftwidth=4
   autocmd FileType text set tabstop=4
 
   " autocmd FileType text setlocal formatoptions=tcqn
 
-  autocmd FileType cpp set textwidth=80
+  autocmd FileType cpp set textwidth=79
   autocmd FileType cpp set wrap
   " autocmd FileType cpp set colorcolumn=80
   " autocmd FileType cpp syntax off
@@ -141,7 +141,7 @@ endif
 set tabstop=4
 set shiftwidth=4
 set expandtab
-" set smarttab
+set smarttab
 
 let g:pyindent_continue='&sw'
 let g:pyindent_open_paren='&sw'
@@ -150,15 +150,15 @@ let g:pyindent_open_paren='&sw'
 
 set t_ZH=[3m
 set t_ZR=[23m
-colo codefocus
-set colorcolumn=80
+colo codefocus-light
+set colorcolumn=81
 
 " Always show a status line
 set laststatus=2
 
-" set listchars=tab:>-,trail:~
-" set listchars=trail:~
-" set list
+set listchars=tab:>-,trail:~
+set listchars=trail:~
+set list
 " Для облегчения работы с кириллицей
 " Переключение раскладки по CTRL-^
 " Команды работают при любой раскладке
